@@ -1,0 +1,16 @@
+node_modules
+lib
+dist
+coverage
+npm-debug.log
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+.eslintcache
+.DS_Store
+README.md
+LICENSE
+.vscode
+

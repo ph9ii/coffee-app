@@ -1,0 +1,56 @@
+{
+  "name": "coffee-app",
+  "version": "1.0.0",
+  "author": "Mohum",
+  "description": "Coffee-App is an online web service Restful public API: A client is building an e-commerce mobile application for their line of coffee machines and custom coffee pods.They are looking to have two screens: one screen to display coffee machines and one screen to display coffee pods.On the coffee machines screen, the user may filter by product type and water line.On the coffee pods screen, the user may filter by product type, coffee flavor, and pack size.",
+  "scripts": {
+    "lint": "eslint --cache --ext .js ./src/",
+    "flow": "flow",
+    "db:seed": "babel-node ./database/seeds/run.seeder.js",
+    "build:node": "babel ./src -d lib/",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/bin/www --exec babel-node",
+    "start": "cross-env NODE_ENV=production node ./lib/bin/www",
+    "test": "cross-env NODE_ENV=test jest --watchAll --verbose",
+    "test:full": "jest --watchAll --verbose --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@hapi/joi": "^15.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.1.0",
+    "express": "~4.16.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^3.21.0",
+    "http-errors": "~1.6.3",
+    "joi-objectid": "^3.0.1",
+    "mongoose": "^5.7.11",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.2.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "flow-bin": "^0.106.3",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "supertest": "^4.0.2",
+    "webpack": "^4.39.3"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
